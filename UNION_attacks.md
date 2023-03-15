@@ -1,4 +1,4 @@
-#UNION attacks
+# UNION attacks
 
 The union keyword lets you exucute one or more additional SELECT queries and append the results to the original query.
 
@@ -18,6 +18,8 @@ We can do this by adding ** 'UNION SELECT NULL-- ** to the url query.
 If you get an error, then that is not the correct number of columns. Keep adding NULL till a data column is displayed. i.e
 
 >' UNION SELECT NULL--
+>
 >' UNION SELECT NULL,NULL--
+>
 >' UNION SELECT NULL,NULL,NULL--
 >etc.
